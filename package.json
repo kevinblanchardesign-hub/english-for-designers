@@ -1,0 +1,49 @@
+{
+  "name": "english-for-designers",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:push": "prisma db push",
+    "db:migrate": "prisma migrate dev --name init",
+    "db:studio": "prisma studio"
+  },
+  "dependencies": {
+    "next": "14.2.5",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "framer-motion": "^11.3.0",
+    "@prisma/client": "^5.16.0",
+    "next-auth": "^4.24.7",
+    "@auth/prisma-adapter": "^2.2.0",
+    "stripe": "^16.2.0",
+    "@stripe/stripe-js": "^4.1.0",
+    "resend": "^3.3.0",
+    "posthog-js": "^1.141.0",
+    "bcryptjs": "^2.4.3",
+    "zod": "^3.23.8",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@types/bcryptjs": "^2.4.6",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.6",
+    "tsx": "^4.16.0",
+    "prisma": "^5.16.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.5"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  }
+}
