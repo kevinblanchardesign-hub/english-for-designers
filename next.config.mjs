@@ -8,9 +8,7 @@ const nextConfig = {
       { protocol: 'https', hostname: '*.r2.dev' },
     ],
   },
-  experimental: {
-    serverComponentsExternalPackages: ['@prisma/client', 'bcryptjs'],
-  },
+  serverExternalPackages: ['@prisma/client', 'bcryptjs'],
 }
 
 export default nextConfig
