@@ -3,6 +3,8 @@ import { stripe } from '@/lib/stripe'
 import { prisma } from '@/lib/prisma'
 import type Stripe from 'stripe'
 
+export const dynamic = 'force-dynamic'
+
 export async function POST(req: NextRequest) {
   const body = await req.text()
   const sig = req.headers.get('stripe-signature')
@@ -110,8 +112,4 @@ export async function POST(req: NextRequest) {
     console.error('Webhook handler error:', error)
     return NextResponse.json({ error: 'Webhook handler error' }, { status: 500 })
   }
-}
-
-export const config = {
-  api: { bodyParser: false },
 }

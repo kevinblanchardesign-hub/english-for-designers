@@ -57,7 +57,7 @@ export function LessonPlayer({ lesson, onComplete, isLast }: LessonPlayerProps) 
                 <p className="text-white/60 text-sm">Vidéo disponible en version Premium</p>
               </div>
             </div>
-            {content.keyPhrases && (
+            {Array.isArray(content.keyPhrases) && (
               <div className="text-left">
                 <h3 className="text-lg font-black text-brand-dark mb-3">Phrases clés</h3>
                 <div className="space-y-2">

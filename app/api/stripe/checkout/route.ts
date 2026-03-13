@@ -4,6 +4,8 @@ import { authOptions } from '@/lib/auth'
 import { stripe, PLANS } from '@/lib/stripe'
 import { prisma } from '@/lib/prisma'
 
+export const dynamic = 'force-dynamic'
+
 export async function POST(req: NextRequest) {
   const session = await getServerSession(authOptions)
   if (!session) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })

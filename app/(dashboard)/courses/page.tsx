@@ -44,7 +44,7 @@ export default async function CoursesPage({
         }))
       return acc
     },
-    {} as Record<string, typeof courses>,
+    {} as Record<string, (Omit<(typeof courses)[number], 'progress'> & { progress: number; isEnrolled: boolean })[]>,
   )
 
   return (
